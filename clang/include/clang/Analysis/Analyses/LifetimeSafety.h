@@ -34,6 +34,7 @@ class Fact;
 class FactManager;
 class LoanPropagationAnalysis;
 class ExpiredLoansAnalysis;
+class LiveOriginAnalysis;
 struct LifetimeFactory;
 
 /// A generic, type-safe wrapper for an ID, distinguished by its `Tag` type.
@@ -101,6 +102,7 @@ private:
   std::unique_ptr<FactManager> FactMgr;
   std::unique_ptr<LoanPropagationAnalysis> LoanPropagation;
   std::unique_ptr<ExpiredLoansAnalysis> ExpiredLoans;
+  std::unique_ptr<LiveOriginAnalysis> LiveOrigins;
 };
 } // namespace internal
 } // namespace clang::lifetimes
